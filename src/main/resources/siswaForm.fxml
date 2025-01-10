@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.sekolah.SiswaController" spacing="10" alignment="CENTER" padding="20">
+    <!-- Form Input untuk Nama dan Alamat Siswa -->
+    <TextField fx:id="namaField" promptText="Nama Siswa" prefWidth="300"/>
+    <TextField fx:id="alamatField" promptText="Alamat Siswa" prefWidth="300"/>
+    
+    <!-- Tombol-tombol aksi (Tambah, Update, Hapus) -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Tambah" onAction="#handleAddSiswa"/>
+        <Button text="Update" onAction="#handleUpdateSiswa"/>
+        <Button text="Hapus" onAction="#handleDeleteSiswa"/>
+    </HBox>
+
+    <!-- Tabel untuk Menampilkan Data Siswa -->
+    <TableView fx:id="siswaTable" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="namaColumn" text="Nama" prefWidth="200"/>
+            <TableColumn fx:id="alamatColumn" text="Alamat" prefWidth="350"/>
+        </columns>
+    </TableView>
+</VBox>
